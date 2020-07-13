@@ -1,5 +1,6 @@
 {
   "app.menu.home": "Home",
   "app.users.form.name": "",
-  "app.users.form.password": "Senha"
+  "app.users.form.password": "Senha",
+  "app.users.form.save": "Salvar"
 }
