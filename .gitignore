@@ -1,1 +1,5 @@
 language.json
+
+node_modules/
+dev/
+.cache

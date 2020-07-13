@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+input {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  border: 1px solid #bbb;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+button {
+  background-color: #047d0c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 30px 30px 10px;
+  padding: 10px 20px;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #07b012;
+  transform: scale(0.9);
+}
