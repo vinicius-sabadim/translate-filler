@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "client": "parcel app/index.html -d dev",
-    "server": "node server/index.js"
+    "server": "python check-languages.py && node server/index.js"
   },
   "dependencies": {
     "axios": "^0.19.2",

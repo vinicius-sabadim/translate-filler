@@ -4,8 +4,6 @@ import re
 
 
 def is_valid_file(filename):
-    if filename == 'language.json':
-        return False
     return re.search("(.*).json$", filename)
 
 
@@ -13,7 +11,7 @@ def separate_keys_with_language(files):
     my_dict = {}
 
     for filename in files:
-        with open(filename) as json_file:
+        with open(f"translations/{filename}") as json_file:
             data = json.load(json_file)
             language = filename.replace(".json", "")
 
@@ -42,7 +40,7 @@ def save_json(data):
 
 
 language_files = [f for f in os.listdir(
-    '.') if os.path.isfile(f) and is_valid_file(f)]
+    'translations') if is_valid_file(f)]
 
 file = separate_keys_with_language(language_files)
 file = insert_missing_language(file, language_files)

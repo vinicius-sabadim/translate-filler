@@ -11,8 +11,19 @@ app.use(bodyParser.json())
 app.post('/save', (req, res) => {
   const data = req.body
 
-  fs.writeFile('from_server.json', JSON.stringify(data), (err) => {
-    if (err) throw err
+  const languages = Object.keys(data[Object.keys(data)[0]])
+
+  languages.forEach((language) => {
+    const content = Object.keys(data).reduce(
+      (obj, word) => ({ ...obj, [word]: data[word][language] }),
+      {}
+    )
+
+    const file = `translations/${language}.json`
+
+    fs.writeFile(file, JSON.stringify(content), (err) => {
+      if (err) throw err
+    })
   })
   res.send('ok')
 })

@@ -26,7 +26,7 @@ button {
   color: white;
   cursor: pointer;
   font-size: 24px;
-  margin: 30px 30px 10px;
+  margin-right: 40px;
   padding: 10px 20px;
   transition: all 0.2s;
 }
@@ -34,4 +34,16 @@ button {
 button:hover {
   background-color: #07b012;
   transform: scale(0.9);
+}
+
+.saved-text {
+  color: #047d0c;
+  position: relative;
+}
+
+.saved-text::before {
+  content: '✓';
+  left: -15px;
+  position: absolute;
+  top: -1px;
 }
