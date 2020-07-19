@@ -1,7 +1,1 @@
-{
-  "app.menu.home": "Home",
-  "app.menu.products": "",
-  "app.users.form.name": "Nome",
-  "app.users.form.password": "Senha",
-  "app.users.form.save": "Salvar"
-}
+{"app.menu.home":"Home","app.menu.products":"","app.users.form.name":"Nome","app.users.form.password":"Senha","app.users.form.phone":"","app.users.form.save":"Salvar"}

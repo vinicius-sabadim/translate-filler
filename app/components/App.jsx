@@ -25,11 +25,23 @@ const styles = {
     display: 'flex',
     marginBottom: '10px',
   },
+  flag: {
+    alignItems: 'center',
+    border: '1px solid #aaa',
+    display: 'flex',
+    height: '28px',
+    justifyContent: 'center',
+    width: '40px',
+  },
 }
 
 function getFlag(language) {
+  // Get missing flags here
+  // https://www.iconarchive.com/show/flags-icons-by-wikipedia.html
+
   if (language === 'pt-br') return <BrazilFlag style={{ width: '40px' }} />
   if (language === 'en') return <USAFlag style={{ width: '40px' }} />
+  return <div style={styles.flag}>{language}</div>
 }
 
 function handleSubmit(data) {
